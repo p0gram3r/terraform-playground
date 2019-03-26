@@ -10,12 +10,6 @@ terraform {
 }
 
 
-variable "server_port" {
-  description = "The port the server will use for HTTP requests"
-  default = 8080
-}
-
-
 resource "aws_instance" "example" {
   ami = "ami-0405a63f383fddd6b"
   instance_type = "t2.micro"
@@ -47,9 +41,4 @@ resource "aws_security_group" "instance" {
       "0.0.0.0/0"
     ]
   }
-}
-
-
-output "public_ip" {
-  value = "${aws_instance.example.public_ip}"
 }
