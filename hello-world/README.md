@@ -1,12 +1,12 @@
 # Hello World wih Terraform and AWS
 
 In this simple tutorial we will spawn a publicly accessible EC2 instance with 
-Ubuntu and a busybox http daemon that returns some static text. The instance
+Ubuntu and a [busybox http daemon](https://openwrt.org/docs/guide-user/services/webserver/http.httpd) that returns some static text. The instance
 will be created in `eu-central-1` (Frankfurt) by default. 
 
 
 ### Prerequisites
-- create AWS credentials file (`~.aws/credentials`):
+- create AWS credentials file (`~/.aws/credentials`):
     ```
     aws configure
     ```
@@ -43,7 +43,7 @@ You can draw a visual representation of all resources using the
 command! The output of the command is in the DOT format, which can easily be
 converted to an SVG image by GraphViz:
 ```
-terraform graph | dot -Tsvg > graph.svg
+terraform graph | dot -Tsvg > /tmp/graph.svg && open /tmp/graph.svg
 ``` 
 
 
