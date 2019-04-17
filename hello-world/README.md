@@ -37,8 +37,19 @@ terraform destroy
 ```
 
 
+### Drawing dependency graph of Terraform resources
+You can draw a visual representation of all resources using the 
+[Terraform graph](https://www.terraform.io/docs/commands/graph.html) 
+command! The output of the command is in the DOT format, which can easily be
+converted to an SVG image by GraphViz:
+```
+terraform graph | dot -Tsvg > graph.svg
+``` 
+
+
 ### Configuration
-The service can be configured using environment variables. Make sure to use the `TF_VAR_` prefix, e.g.:
+The service can be configured using environment variables. Make sure to use the 
+`TF_VAR_` prefix, e.g.:
 ```
 TF_VAR_SERVER_MESSAGE="Hi there!" terraform apply
 ```
