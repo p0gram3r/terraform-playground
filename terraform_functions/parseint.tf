@@ -16,10 +16,12 @@ locals {
   }
 
   base36 = {
-    "K" = parseint("K",37)
-    "Q" = parseint("Q",37)
-    "k" = parseint("k",37)
-    "q" = parseint("q",37)
+    "a" = parseint("a",36)
+    "z" = parseint("z",36)
+    "K" = parseint("K",36)
+    "Q" = parseint("Q",36)
+    "k" = parseint("k",36)
+    "q" = parseint("q",36)
     "hello" = parseint("hello",36)
     "thisisaverylongtext" = parseint("thisisaverylongtext",36)
   }
